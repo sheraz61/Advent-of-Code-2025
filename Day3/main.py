@@ -1,4 +1,4 @@
-# Part 2
+# Part 1
 def max_two_digit(line):
     mx = -1
     for i in range(len(line) - 1):
@@ -20,7 +20,7 @@ def max_12_digit_joltage(bank):
     n = len(bank)
     k = 12
     stack = []
-    remove_count = n - k  # digits we can remove
+    remove_count = n - k 
 
     for digit in bank:
         while stack and remove_count > 0 and stack[-1] < digit:
@@ -28,10 +28,10 @@ def max_12_digit_joltage(bank):
             remove_count -= 1
         stack.append(digit)
     
-    # take the first 12 digits
+    
     return int(''.join(stack[:12]))
 
-# total sum
+
 total = 0
 with open("input.txt") as f:
     for line in f:
